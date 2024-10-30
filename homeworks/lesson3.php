@@ -73,3 +73,4 @@
  }
  
  echo mathOperations(7, 3);
+ 

@@ -118,9 +118,67 @@ function getProducts($category)
 
     uasort($list, 'cmp');
     print_r($list);
+
+    $test = array_filter($list, function ($item) {
+        return $item['count'] > 10;
+    });
+
+    echo "<br>";
+    var_dump($test);
 }
 
 getProducts("electronics");
+
+echo "<br><br>";
+
+/**
+ * Task 4
+ */
+
+$allStudents = [
+    'Bill',
+    'Stieve',
+    'Pavel',
+    'Murk',
+    'Biden',
+    'Musk',
+];
+
+$students = [
+    'Pavel',
+    'Trump',
+];
+
+function check()
+{
+    global $allStudents, $students;
+
+    $arr = [];
+    foreach ($allStudents as $item) {
+        $count = 0;
+        foreach ($students as $student) {
+            if ($item !== $student) {
+                $count++;
+            }
+            if($item === $student){
+                $count = 0;
+                break;
+            }
+        }
+        if($count !== 0){
+            array_push($arr, $item);
+        }
+    }
+
+
+    return $arr;
+}
+echo "4444444444444444444444444<br>";
+var_dump(check());
+echo "<br><br>";
+
+
+
 
 
 /**

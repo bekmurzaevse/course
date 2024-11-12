@@ -1,7 +1,6 @@
 <?php
 
-// require "/homeworks/lesson1.php";
-// use Homeworks;
+namespace Lessons;
 
 function qosiw(...$data): float|int
 {
@@ -15,5 +14,13 @@ function qosiw(...$data): float|int
 // echo $awa;
 
 qosiw(1,2,4,5,6,8,9,10,100);
+
+function awa(string $name): string{
+    return $name;
+}
+
+
+
+
 
 
